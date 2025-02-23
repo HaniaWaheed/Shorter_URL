@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Short URL{% endblock %}
+
+{% block content %}
+<div class="text-center mt-4">
+    <h3>Your Shortened URL:</h3>
+    <h1>
+        <a href="{{ url_for('redirection', short_url=short_url_display) }}" target="_blank">
+            https://tinyurlanish.herokuapp.com/{{ short_url_display }}
+        </a>
+    </h1>
+    <br>
+    <a href="{{ url_for('home') }}" class="btn btn-success">Back to Home</a>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HANIA's URL Shortener{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background: #3f033b; /* Full grey background */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container-fluid {
+            background: rgba(189, 158, 185, 0.9); /* Slightly darker grey for contrast */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            flex: 1;
+        }
+        h1 {
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+            font-weight: bold;
+        }
+        /* Full-Screen Footer */
+        .footer {
+            background: #1f1f1f; /* Dark grey footer */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid text-center">
+            <h1 class="mt-4">🚀 HANIA's URL Shortener 🚀</h1>
+            <hr>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        🌐 Developed by Hania | URL Shortener | © 2024
+    </div>
+
+    <!-- Bootstrap & jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

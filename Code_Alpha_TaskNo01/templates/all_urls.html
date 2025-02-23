@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}View All URLs{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Stored URLs</h2>
+    <hr>
+    {% for url in vals %}
+        <p><strong>Short:</strong>
+            <a href="{{ url_for('redirection', short_url=url.short) }}" target="_blank">
+                {{ url.short }}
+            </a>
+            <br>
+            <strong>Long:</strong> {{ url.long }}
+        </p>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

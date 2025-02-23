@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Shorten URL{% endblock %}
+
+{% block content %}
+<div class="text-center mt-4">
+    <form action="/" method="post">
+        <label for="url">Enter an HTTPS URL:</label>
+        <input type="url" name="nm" id="url" class="form-control w-50 mx-auto"
+               placeholder="https://example.com" pattern="https://.*" required>
+        <br>
+        <input type="submit" value="Shorten URL" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
